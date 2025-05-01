@@ -4,7 +4,7 @@ def call(String gitUrl, String gitBranch) {
         $class: 'GitSCM',
         branches: [[name: "*/${gitBranch}"]],
         userRemoteConfigs: [[
-            url: "https://github.com/pank07/django-notes-app.git"
+            url: "https://github.com/pank07/django-notes-app.git",
             credentialsId: 'github_PAT'
         ]]
     ])
