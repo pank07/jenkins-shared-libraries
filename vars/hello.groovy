@@ -1,3 +1,3 @@
 def call(){
-  echo "Hello jenkins, check my code what went wrong"
+  echo "Hello jenkins,this declrative work properly but rest of threm are not"
 }
