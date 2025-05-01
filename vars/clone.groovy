@@ -1,3 +1,11 @@
-def call(String GitUrl, String GitBranch) {
-  git url: "${GitUrl}", branch: "${GitBranch}", credentialsId: 'your-credentials-id'
+def call(String gitUrl, String gitBranch) {
+    echo "Cloning repository: ${gitUrl} on branch: ${gitBranch}"
+    checkout([
+        $class: 'GitSCM',
+        branches: [[name: "*/${main}"]],
+        userRemoteConfigs: [[
+            url: https://github.com/pank07/django-notes-app.git,
+            credentialsId: 'github_PAT'
+        ]]
+    ])
 }
